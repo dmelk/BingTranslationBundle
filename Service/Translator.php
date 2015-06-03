@@ -91,7 +91,7 @@ class Translator
         $now = $now->getTimestamp();
 
         if ($config !== false) {
-            if ($config['expires'] < $now) return $config['access_token'];
+            if ($config['expires'] >= $now) return $config['access_token'];
         }
 
         $ch = curl_init();
