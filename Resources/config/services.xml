@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="melk_bing_translation.translator" class="Melk\BingTranslationBundle\Service\Translator">
+            <argument type="service" id="kernel" />
+            <argument>%melk_bing_translation.client_id%</argument>
+            <argument>%melk_bing_translation.client_secret%</argument>
+        </service>
+    </services>
+
+</container>
